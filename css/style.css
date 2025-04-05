@@ -1,0 +1,122 @@
+*, after, before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: "Nunito Sans";
+  font-size: 62.5%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: [full-start] 1fr [content-start] minmax(33rem, 132rem) [content-end] 1fr [full-end];
+  grid-template-rows: 7rem -webkit-max-content;
+  grid-template-rows: 7rem max-content;
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+  src: url(../fonts/NunitoSans_10pt-Regular.ttf);
+}
+.margin-bottom-24 {
+  margin-bottom: 2.4rem;
+}
+
+.header {
+  grid-column: full-start/full-end;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: 1fr [content-start-2] minmax(33rem, 132rem) [content-end-2] 1fr;
+  grid-template-rows: 100%;
+  background-color: gray;
+}
+.header__content {
+  grid-column: content-start-2/content-end-2;
+  grid-row: 1/2;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 1.2rem;
+}
+
+.avatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.avatar__img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 3rem;
+}
+.avatar__organization {
+  font-family: Nunito Sans;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: white;
+}
+.avatar__name {
+  font-family: Nunito Sans;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: white;
+}
+
+.main {
+  grid-column: content-start/content-end;
+  grid-row: 2/3;
+  padding: 1.2rem;
+}
+.main__title-1 {
+  margin-bottom: 2.4rem;
+}
+
+.blockPages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, -webkit-max-content));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, max-content));
+  grid-template-rows: -webkit-max-content;
+  grid-template-rows: max-content;
+  gap: 1.2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pageItem {
+  width: 25rem;
+  height: 18rem;
+  border: 2px solid black;
+  border-radius: 1.5rem;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+.pageItem:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.pageItem__link {
+  text-decoration: none;
+  color: black;
+}
+.pageItem__name {
+  padding: 0.6rem;
+}
+.pageItem__img {
+  width: 24.6rem;
+  height: 14.5rem;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  z-index: -1;
+}
