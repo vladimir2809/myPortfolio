@@ -13,8 +13,8 @@ html {
 .container {
   display: grid;
   grid-template-columns: [full-start] 1fr [content-start] minmax(33rem, 132rem) [content-end] 1fr [full-end];
-  grid-template-rows: 7rem -webkit-max-content;
-  grid-template-rows: 7rem max-content;
+  grid-template-rows: 7rem -webkit-max-content 7rem;
+  grid-template-rows: 7rem max-content 7rem;
 }
 
 @font-face {
@@ -23,6 +23,10 @@ html {
 }
 .margin-bottom-24 {
   margin-bottom: 2.4rem;
+}
+
+.margin-bottom-48 {
+  margin-bottom: 4.8rem;
 }
 
 .header {
@@ -80,8 +84,24 @@ html {
 .main__title-1 {
   margin-bottom: 2.4rem;
 }
+.main__link-game {
+  text-align: center;
+  text-decoration: none;
+}
+.main__title-game {
+  padding-top: 2.4rem;
+  font-size: 5rem;
+  color: green;
+}
 
 .blockPages {
+  display: grid;
+  grid-template-columns: 1fr minmax(25rem, 80rem) 1fr;
+  grid-template-rows: -webkit-max-content;
+  grid-template-rows: max-content;
+}
+.blockPages__content {
+  grid-column: 2/3;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, -webkit-max-content));
   grid-template-columns: repeat(auto-fit, minmax(25rem, max-content));
@@ -119,4 +139,25 @@ html {
   border-bottom-left-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
   z-index: -1;
+}
+
+.footer {
+  grid-column: full-start/full-end;
+  grid-row: 3/4;
+  display: grid;
+  grid-template-columns: 1fr [content-start-2] minmax(33rem, 132rem) [content-end-2] 1fr;
+  grid-template-rows: 100%;
+  background-color: gray;
+}
+.footer__content {
+  grid-column: content-start-2/content-end-2;
+  grid-row: 1/2;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 1.2rem;
+}
+.footer__paragraph {
+  font-size: 1.6rem;
+  color: white;
+  text-align: center;
 }

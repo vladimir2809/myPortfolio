@@ -4,12 +4,27 @@
     padding: 1.2rem
     &__title-1
         margin-bottom: 2.4rem
+    &__link-game
+        text-align: center
+        text-decoration: none
+        
+    &__title-game
+        padding-top: 2.4rem
+        font-size: 5rem
+        color: green
 .blockPages
     display: grid
-    grid-template-columns: repeat( auto-fit, minmax(25rem, max-content) )
+    grid-template-columns: 1fr minmax(25rem, 80rem) 1fr
     grid-template-rows: max-content
-    gap: 1.2rem
-    justify-content: center
+    &__content
+        grid-column: 2 / 3
+        display: grid
+        grid-template-columns: repeat( auto-fit, minmax(25rem, max-content) )
+        grid-template-rows: max-content
+        gap: 1.2rem
+        justify-content: center
+        //margin: 0 auto
+        //justify-items: center
 .pageItem
     width: 25rem
     height: 18rem
